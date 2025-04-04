@@ -1,0 +1,137 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Spectral', serif;
+  overflow-x: hidden;
+  background-color: black;
+  color: #e6e6e6;
+}
+
+.parallax-bg {
+  background-image: url('https://i.imgur.com/8Zr8jU0.jpeg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: 0.2;
+  animation: pulse 40s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.15; }
+  100% { opacity: 0.3; }
+}
+
+.overlay {
+  position: relative;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  text-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+.subline {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ccc;
+}
+.subline .laws {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #eee;
+}
+
+.preludes {
+  margin-top: 60px;
+}
+
+.prelude {
+  margin-bottom: 50px;
+  padding-left: 10px;
+  border-left: 2px solid #888;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+.prelude:nth-child(1) { animation-delay: 0.5s; }
+.prelude:nth-child(2) { animation-delay: 1s; }
+.prelude:nth-child(3) { animation-delay: 1.5s; }
+.prelude:nth-child(4) { animation-delay: 2s; }
+.prelude:nth-child(5) { animation-delay: 2.5s; }
+.prelude:nth-child(6) { animation-delay: 3s; }
+.prelude:nth-child(7) { animation-delay: 3.5s; }
+.prelude:nth-child(8) { animation-delay: 4s; }
+.prelude:nth-child(9) { animation-delay: 4.5s; }
+
+.prelude h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.prelude p {
+  font-size: 16px;
+  color: #c0c0c0;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.observer-button {
+  text-align: center;
+  margin: 60px auto;
+  padding: 14px 28px;
+  font-size: 16px;
+  border: 2px solid #aaa;
+  color: #aaa;
+  width: fit-content;
+  transition: 0.3s;
+  animation: pulse 2s infinite;
+}
+.observer-button:hover {
+  color: #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+.community-links {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #ccc;
+}
+.community-links a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 8px;
+}
+.community-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #888;
+}
