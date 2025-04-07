@@ -4,22 +4,26 @@ body, html {
   height: 100%;
   font-family: 'Spectral', serif;
   overflow-x: hidden;
+  overflow-y: auto; /* ← make sure vertical scrolling works */
   background-color: black;
   color: #e6e6e6;
+  position: relative;
 }
 
 .parallax-bg {
-  background-image: url('cosmos.jpg');
+  background-image: url('cosmos.jpg'); /* use local version */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: -2;
-  opacity: 1 !important;      /* Force full visibility */
-  border: 5px solid red;      /* Debug outline */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0; /* ← not negative */
+  opacity: 0.3;
+  pointer-events: none; /* prevent any accidental blocking */
 }
 
 @keyframes pulse {
@@ -29,7 +33,7 @@ body, html {
 
 .overlay {
   position: relative;
-  z-index: 1; /* Add this */
+  z-index: 1; /* ← explicitly above the background */
   padding: 40px 20px;
   max-width: 800px;
   margin: auto;
